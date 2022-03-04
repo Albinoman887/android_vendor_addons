@@ -37,6 +37,23 @@ PRODUCT_COPY_FILES += \
     vendor/addons/prebuilt/system/addon.d/70-velvet.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/70-velvet.sh
 endif
 
+# Artifact path requirement allowlist
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/etc/permissions/android.hardware.biometrics.face.xml \
+    system/etc/permissions/privapp-permissions-com.crdroid.faceunlock.xml \
+    system/etc/sysconfig/hiddenapi-whitelist-com.crdroid.faceunlock.xml \
+    system/lib64/faceunlock_vendor_dependencies.so \
+    system/lib64/libFaceDetectCA.so \
+    system/lib64/libMegviiUnlock-jni-1.2.so \
+    system/lib64/libMegviiUnlock.so \
+    system/lib64/libarcsoft-lib.so \
+    system/lib64/libarcsoft_faceid.so \
+    system/lib64/libarcsoftbase.so \
+    system/lib64/libmegface.so \
+    system/lib64/libmpbase.so \
+    system/priv-app/FaceUnlockService/FaceUnlockService.apk
+
+
 # Prebuilt packages for device features
 PRODUCT_PACKAGES += \
     DevicePersonalizationPrebuiltPixel2021 \
